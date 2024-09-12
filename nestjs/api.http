@@ -1,0 +1,17 @@
+GET http://localhost:3000/routes
+
+###
+GET http://localhost:3000/routes?price=150&category=Eletronicos&search=Item
+
+
+###
+POST http://localhost:3000/routes
+Content-Type: application/json
+
+{
+    "name": "rota test",
+    "image": "image tate",
+    "category": "category teste",
+    "float": "float teste",
+    "price": 10
+}
