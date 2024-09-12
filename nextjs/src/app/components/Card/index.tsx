@@ -1,18 +1,46 @@
+'use client'
+
+import { Box, Image, Text, Button } from '@chakra-ui/react';
+
+interface CardProps {
+    imageSrc: string;
+    title: string;
+    description: React.ReactNode;
+    buttonText: string;
+  }
+
 import "./style.css"
 
-export default function Card() {
-    return(
-        <div className="card">
-            <div className="container">
-                <div className="aboutProject__Header">
-                    <h2>
-                        Sobre o Projeto Frontend Fusion
-                    </h2>
-                    <p>
-                        O Frontend Fusion é um projeto inovador focado em proporcionar uma experiência envolvente de aprendizado de programação. Nosso objetivo é oferecer um ambiente colaborativo onde entusiastas de tecnologia possam mergulhar no mundo do desenvolvimento frontend, explorando CSS, HTML e JavaScript através de desafios e atividades interativas. 
-                    </p>
-                </div>
-            </div>
+export default function Card({ imageSrc, title, description, buttonText }: CardProps) {
+    return (
+        <div className="products__list--card">
+            <Box
+                maxW="sm"
+                borderWidth="0px"
+                borderRadius="lg"
+                boxShadow="md"
+                p="20"
+                textAlign="center"
+            >
+                <Image src={imageSrc} alt={title} borderRadius="md" />
+        
+                <Box mt="4">
+                <Text fontSize="xl" fontWeight="bold">
+                    {title}
+                </Text>
+                <Text mt="2" fontSize="md">
+                    {description}
+                </Text>
+                </Box>
+        
+                <Button
+                    mt="4"
+                    colorScheme="teal"
+                    size="md"
+                    >
+                    {buttonText}
+                </Button>
+            </Box>
         </div>
-    )
-}
+    );
+  }

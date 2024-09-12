@@ -1,0 +1,84 @@
+.header{
+    @apply
+        bg-black
+        py-4
+        px-6
+        h-[100px]
+        w-full
+        flex
+        justify-center
+        items-center
+}
+
+.header nav{
+    @apply
+        w-full
+        flex
+        justify-between
+        items-center
+}
+
+.header nav img{
+    @apply
+        w-[120px]
+        h-[45px]
+        max-w-full
+
+        lg:w-[150px]
+        lg:h-[60px]
+}
+
+.header .header__Navlinks--desk{
+    @apply
+        hidden
+        items-center
+        w-full
+        justify-end
+
+        lg:flex
+}
+
+.header .header__Navlinks--desk a{
+    @apply
+        mx-6
+        hover:text-primary
+}
+
+.header .header__Navlinks--desk .header__cart, .header__Navlinks--mob .header__cart{
+    @apply
+        flex
+        bg-primary
+        py-2
+        px-4
+        w-[150px]
+        rounded-md
+        transition
+
+        hover:bg-blackprimary
+        hover:scale-95
+}
+
+.header .header__Navlinks--desk .header__cart li, .header__Navlinks--mob .header__cart li{
+    @apply
+        w-full
+        flex
+        items-center
+        justify-around
+
+        hover:text-primary
+}
+
+.header .header__Navlinks--desk .header__cart svg, .header__Navlinks--mob .header__cart svg{
+    @apply
+        fill-white
+        w-[30px]
+        h-[30px]
+        cursor-pointer
+}
+
+/* nav mob */
+.header__Navlinks--mob{
+    @apply
+        lg:hidden
+        flex
+}

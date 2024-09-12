@@ -1,0 +1,40 @@
+/* Main */
+
+main {
+    @apply
+        bg-blackprimary
+        w-full
+        min-h-full
+        flex-1
+        relative
+}
+
+main .products{
+    @apply
+        lg:px-10
+        lg:py-6
+        lg:w-[80%]
+
+        flex
+}
+
+main aside{
+    @apply
+        w-[20%]
+        h-full
+        bg-primary
+        absolute
+        right-0
+        top-0
+        shadow-inner
+        flex
+        items-start
+        justify-center
+        py-3
+}
+
+main aside p{
+    @apply
+        text-blackprimary
+        font-semibold
+}

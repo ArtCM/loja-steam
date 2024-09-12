@@ -1,0 +1,83 @@
+.navButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.navButton .bar {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.open .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+  background-color: var(--primary);
+}
+
+.open .bar:nth-child(2) {
+  opacity: 0;
+  background-color: var(--primary);
+}
+
+.open .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+  background-color: var(--primary);
+}
+
+.navMenu {
+  display: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 100%;
+  background-color: var(--black);
+  padding: 20px;
+  box-shadow: 0px 3px 6px var(--primary);
+  z-index: 1000;
+}
+
+.menuOpen {
+  display: flex;
+  opacity: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.navMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navMenu ul li {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.navMenu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+}
+
+.navMenu ul li a:hover{
+  color: var(--primary);
+}

@@ -21,6 +21,10 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Montserrat', Helvetica, sans-serif;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 @layer utilities {
@@ -28,3 +32,6 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Classes Globais */
+

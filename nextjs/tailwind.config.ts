@@ -15,6 +15,9 @@ const config: Config = {
         blackprimary: "var(--black)",
         whiteprimary: "var(--white)",
       },
+      boxShadow: {
+        '3xl': '0 0px 10px 0px rgb(221, 116, 4, 0.5)',
+      }
     },
   },
   plugins: [],

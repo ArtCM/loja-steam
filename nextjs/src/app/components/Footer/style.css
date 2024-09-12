@@ -1,0 +1,113 @@
+.footer{
+    @apply
+        bg-black
+}
+
+.footer__container{
+    @apply
+        w-full
+        flex
+        flex-col
+        justify-around
+        items-center
+        px-3
+        py-5
+
+        lg:flex-row
+        lg:px-10
+        
+}
+
+.footer__links{
+    @apply
+        flex
+        order-2
+        text-center
+        py-4
+        mt-4
+        text-[18px]
+
+        lg:order-1
+        lg:w-1/3
+        lg:text-left
+}
+
+.footer__links li{
+    @apply
+        py-2
+}
+
+.footer__links li a{
+    @apply
+        hover:text-primary
+}
+
+.footer__logo{
+    @apply
+        flex
+        justify-center
+        items-center
+        order-1
+
+        lg:order-2
+        lg:w-1/3
+}
+
+.footer__logo img{
+    @apply
+        w-[150px]
+        h-[60px]
+        max-w-full
+
+        lg:w-[200px]
+        lg:h-[90px]
+}
+
+.footer__midias{
+    @apply
+        flex
+        w-full
+        flex-col
+        mb-4
+        order-3
+
+        lg:w-1/3
+}
+
+.footer__midias p{
+    @apply
+        text-center
+        mb-4
+        mt-6
+        text-[22px]
+        font-medium
+}
+
+.footer__midias .footer__midias--links{
+    @apply
+        flex
+        justify-evenly
+        items-center
+        w-full
+}
+
+.footer__midias .footer__midias--links :where(svg){
+    @apply
+        fill-primary
+        h-[35px]
+        w-[35px]
+        hover:scale-110
+        hover:fill-whiteprimary
+        transition
+}
+
+
+.footer__copyright{
+    @apply
+        bg-blackprimary
+        text-center
+        px-3
+        py-2
+        text-[14px]
+        font-light
+}
