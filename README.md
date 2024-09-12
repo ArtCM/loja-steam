@@ -96,6 +96,7 @@ Tecnologias Utilizadas:
 ---------
 - Next.js 14
 - Nest.js 10
+- Node 18.17.1
 - HTML
 - CSS
 - JAVASCRIPT
