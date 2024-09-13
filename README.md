@@ -43,6 +43,36 @@ A aplicação está dividida em:
 - Next.js (frontend - Web)
 - MongoDB (banco de dados)
 
+### Back
+
+Rode o projeto:
+
+~~~
+docker compose up
+~~~
+
+Acesse o container do nest.js:
+
+~~~
+docker compose exec nestjs bash
+~~~
+
+Instale as dependências e configure o prisma:
+
+~~~
+npm install
+npx prisma generate
+~~~
+
+Rode o projeto:
+
+~~~
+npm run start:dev
+~~~
+
+
+### Front
+
 Instale as dependências:
 
 ~~~
