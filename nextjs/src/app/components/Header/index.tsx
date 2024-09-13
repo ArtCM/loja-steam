@@ -18,7 +18,6 @@ export default function Header() {
             <nav className="container">
                 <Image src={Logo} alt="Logo" />
                 <ul className="header__Navlinks--desk">
-                    <a href="#"><li>Categorias</li></a>
                     <a href="#"><li>FAQ</li></a>
                     <a href="#"><li>Contato</li></a>
                     <a className="header__cart" href="#">
@@ -41,10 +40,9 @@ export default function Header() {
                             <span className={styles.bar}></span>
                             <span className={styles.bar}></span>
                         </button>
-
+                        
                         <nav className={`${styles.navMenu} ${isOpen ? styles.menuOpen : ''}`}>
                             <ul>
-                                <li><a href="#">Categorias</a></li>
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="#">Contato</a></li>
                                 <br/>
@@ -61,10 +59,6 @@ export default function Header() {
                     </div>
                 </div>
             </nav>
-
-            <section className="search">
-
-            </section>
         </header>
     );
 }

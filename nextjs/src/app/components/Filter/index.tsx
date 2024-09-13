@@ -1,6 +1,8 @@
 import { Box, Checkbox, CheckboxGroup, Stack, Input, Text, Button } from "@chakra-ui/react";
 import { useState } from "react";
 
+import './style.css';
+
 export default function Filter({ onApplyFilters }: { onApplyFilters: (filters: any) => void }) {
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
     const [priceRange, setPriceRange] = useState<number | string>("");
@@ -22,29 +24,27 @@ export default function Filter({ onApplyFilters }: { onApplyFilters: (filters: a
   };
 
   return (
-    <Box p={5} borderWidth="1px" borderRadius="lg" boxShadow="md">
-      <Text fontSize="lg" mb={4}>Filtro por Categoria</Text>
-      <CheckboxGroup value={selectedCategories} onChange={handleCategoryChange}>
-        <Stack spacing={3}>
-          <Checkbox value="facas">Faca</Checkbox>
-          <Checkbox value="pistolas">Pistola</Checkbox>
-          <Checkbox value="rifles">Rifle</Checkbox>
-        </Stack>
-      </CheckboxGroup>
+    <Box p={5} borderRadius="lg" boxShadow="md">
+        <Text fontSize="xl" mb={4}>Filtro por Categoria</Text>
+        <CheckboxGroup value={selectedCategories} onChange={handleCategoryChange}>
+            <Stack spacing={3}>
+            <Checkbox value="facas">Faca</Checkbox>
+            <Checkbox value="pistolas">Pistola</Checkbox>
+            <Checkbox value="rifles">Rifle</Checkbox>
+            </Stack>
+        </CheckboxGroup>
 
-      <Text fontSize="lg" mt={6} mb={4}>Filter by Price</Text>
-      <Input
-        type="number"
-        placeholder="Enter price"
-        value={priceRange}
-        onChange={handlePriceChange}
-      />
+        <Text fontSize="lg" mt={12} mb={6}>Filtrar por Preço</Text>
+        <Input
+            type="number"
+            placeholder="Valor Máximo"
+            value={priceRange}
+            onChange={handlePriceChange}
+        />
 
-      <Text mt={2}>Valor Maximo: {priceRange}</Text>
-
-      <Button mt={6} colorScheme="teal" onClick={applyFilters}>
-        Apicar Filtros
-      </Button>
+        <Button mt={6} mb={20} colorScheme="teal" onClick={applyFilters}>
+            Apicar Filtros
+        </Button>
     </Box>
   );
 }

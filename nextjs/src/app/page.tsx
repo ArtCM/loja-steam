@@ -10,10 +10,15 @@ import Karambit from '../../public/assets/images/karambit.png';
 
 
 export default function Home() {
-  const [filters, setFilters] = useState({ selectedCategories: [], priceRange: 50 });
+  const [filters, setFilters] = useState({ selectedCategories: [] });
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const handleApplyFilters = (appliedFilters: any) => {
     setFilters(appliedFilters);
+  };
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
   };
 
   return (
@@ -23,6 +28,11 @@ export default function Home() {
       <main>
 
         <section className="products">
+          <div className="products__button">
+            <button onClick={toggleVisibility}>
+              Filtrar
+            </button>
+          </div>
           <div className="products__list">
             <Card
               imageSrc={Karambit.src}
@@ -35,8 +45,8 @@ export default function Home() {
               buttonText="Adicionar ao Carrinho"
             />
           </div>
-          <aside className="products__filter">
-            <Box>
+          <aside className="products__filter" style={{ display: isVisible ? 'flex' : 'none' }}>
+            <Box className="products__filter--content">
               <Filter onApplyFilters={handleApplyFilters} />
 
               <Box mt={10}>

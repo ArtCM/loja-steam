@@ -35,3 +35,8 @@ body {
 
 /* Classes Globais */
 
+@media (min-width: 1024px) {
+  .products__filter {
+    display: block !important;
+  }
+}

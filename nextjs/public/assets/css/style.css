@@ -13,24 +13,52 @@ main .products{
     @apply
         lg:px-10
         lg:py-6
-        lg:w-[80%]
-
+        lg:w-[75%]
         flex
+        flex-col
+}
+
+main .products .products__button{
+    @apply
+        lg:hidden
+        z-10
+        flex
+        w-[100px]
+        h-full
+        items-end
+        justify-center
+        self-end
+        cursor-pointer
+        px-5
+        py-3
+        mr-3
+        mt-3
+        bg-black
+        transition
+        hover:bg-black
+        hover:scale-95
+}
+
+main .products .products__button button{
+    @apply
+        lg:hidden
 }
 
 main aside{
     @apply
-        w-[20%]
+        w-[95%]
+        lg:w-[25%]
         h-full
         bg-primary
         absolute
         right-0
         top-0
         shadow-inner
-        flex
         items-start
         justify-center
         py-3
+        hidden
+        lg:flex
 }
 
 main aside p{
